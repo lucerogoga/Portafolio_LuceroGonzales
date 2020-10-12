@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Mi Portafolio</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
     <link href="styles.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap"
@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <a href="main" class="skip-link">Saltar al Contenido</a>
     <header>
       <img src="images/lucero.jpg" alt="Lucero Gonzales" class="header-img"/>
       <h1 class="header">Lucero Gonzales Gandolfo</h1>
@@ -42,16 +43,22 @@
         <li>
           <a href="https://twitter.com/lucerogoga" target="_blank"
             ><img src="images/twitter.png" alt="twitter"
-          /></a>
+          />
+        <p class="social-link-text">Twitter</p>
+        </a>
         </li>
         <li>
           <a href="https://github.com/lucerogoga" target="_blank"
             ><img src="images/github-logo.png" alt="github"
-        /></a>
+        />
+        <p class="social-link-text">GitHub</p>
+      </a>
         <li>
           <a href="https://www.linkedin.com/in/lucero-del-carmen-gonzales-gandolfo-565658124/" target="_blank"
             ><img src="images/linkedin.png" alt="linkedin"
-          /></a>
+          />
+          <p class="social-link-text">Linkedin</p>
+        </a>
         </li>
       </ul>
     </div>
@@ -59,34 +66,37 @@
   <section>
 <h2 class="header" >Mis proyectos</h2>
     <div class="carousel">
-      <div class="arrow arrow-left" aria-label="backward button"></div>
+      <button class="arrow arrow-left" aria-label="backward button"></button>
       <div class="window">
         <ul class="project-container">
-          <li><button><img class="project project1" src="/images/project1.png" alt="mi primer proyecto"></button></li>
-          <li><button><img class="project project1" src="/images/project1.png" alt="mi segundo proyecto"></button></li>
-          <li><button><img class="project project1" src="/images/project1.png" alt="mi tercero proyecto"></button></li>
-          <li aria-hidden="true"><button><img class="project project1" src="/images/project1.png" alt="mi cuarto proyecto" ></button></li>
-          <li aria-hidden="true"><button><img class="project project1" src="/images/project1.png" alt="mi quinto proyecto" ></button></li>
+          <li class="project1-container"><button class="projecto1 project"><img class="project-img" src="/images/project1.png" alt="mi primer proyecto"></button></li>
+          <li class="project2-container"><button class="projecto2 project"><img class="project-img" src="/images/project1.png" alt="mi segundo proyecto"></button></li>
+          <li class="project3-container"><button class="projecto3 project"><img class="project-img" src="/images/project1.png" alt="mi tercero proyecto"></button></li>
+          <li class="project4-container" aria-hidden="true"><button class="projecto4 project" tabindex="-1"><img class="project-img" src="/images/project1.png" alt="mi cuarto proyecto" ></button></li>
+          <li class="project5-container" aria-hidden="true"><button class="projecto5 project" tabindex="-1"><img class="project-img" src="/images/project1.png" alt="mi quinto proyecto" ></button></li>
         </div>
       </ul>
-      <div class="arrow arrow-right" aria-label="fordward button"div>
+      <button class="arrow arrow-right" aria-label="fordward button"></button>
     </div>
   </section>
 </main>
     <footer class="contact-section">
       <h2 class="header">Contacto</h2>
+      <p class="intro">Para mandarme un mensaje puedes usar el formulario siguiente:</p>
       <form class="form-container">
-        Nombre<input type="text" aria-label="nombre"/> <br />
-        Correo<input type="text" aria-label="correo" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
+       <label class="form-label"> Nombre</label><input type="text" aria-label="nombre"/> <br />
+      <span id="name-error" aria-live="assertive"></span>
+       <label class="form-label"> Correo</label><input type="text" aria-label="correo" /> <br />
+        <label class="message-input">Mensaje<input type="text" /> <br /></label>
         <button class="send-button">Enviar</button>
       </form>
     </footer>
-    <div class="notification">El formulario fue enviado sin errores</div>
+    <div class="notification" aria-live="assertive"></div>
     <div class="modal-container">
       <div class="modal">
-        Ejemplo de un proyecto mio
-        <div class="modal-project-image"></div>
+       <h2 class="header" id="modal-header" tabindex="0"> Ejemplo de un proyecto mio</h2>
+        <img src="images/project2.png" class="modal-project-image" alt="screnn del proyecto">
+        <button class="modal-button">Cerrar</button>
       </div>
     </div>
 
